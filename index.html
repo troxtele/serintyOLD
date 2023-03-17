@@ -5,26 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Main CSS -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/serinty.png"
+      sizes="16x16"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Welcome at Serinty Service Information Technology Limited</title>
   </head>
   <body>
     <header>
       <!-- Large Navbar -->
-      <div class="nav_large">
+      <div class="nav-large">
         <div class="container">
           <div class="wrapper flex justify-between align-center">
             <!-- Logo -->
-            <a href="index.html" class="logo">
-              <img src="./images/serinty.png" alt="Serinity" />
-            </a>
+            <div class="logo flex">
+              <a href="index.html" class="logo-img-link flex justify-center align-center">
+                <img src="./images/serinty.png" alt="Serinity" />
+              </a>
+
+              <!-- logo text -->
+              <div class="logo-texts texts flex flex-col">
+                <span>Serinty Ltd.</span>
+                <span>Your Data - Your Money</span>
+              </div>
+            </div>
 
             <!-- Nav links -->
             <nav class="flex justify-center align-center">
               <ul class="nav-links-large flex align-center">
                 <li><a href="index.html">Home</a></li>
                 <li>
-                  <div class="has-sub-menu">Services</div>
+                  <a
+                    class="flex"
+                    href="https://serinty.net/consulting/"
+                    >Services
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 12"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      ></path></svg
+                  ></a>
                   <ul class="submenu grid">
                     <li>
                       <a href="https://serinty.net/services/telephony/"
@@ -58,7 +89,22 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="has-sub-menu">Consulting</div>
+                  <a href="https://serinty.net/consulting/"
+                    >Consulting
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 12"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      ></path></svg
+                  ></a>
                   <ul class="submenu grid">
                     <li>
                       <a
@@ -84,7 +130,22 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="has-sub-menu">Philosophy</div>
+                  <a href="https://serinty.net/philosophy/"
+                    >Philosophy
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 12"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      ></path></svg
+                  ></a>
                   <ul class="submenu grid">
                     <li>
                       <a
@@ -116,7 +177,22 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="has-sub-menu">Company</div>
+                  <a href="https://serinty.net/company/"
+                    >Company
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 12"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      ></path></svg
+                  ></a>
                   <ul class="submenu grid">
                     <li>
                       <a href="https://serinty.net/company/about/">About</a>
@@ -199,22 +275,22 @@
           </div>
         </div>
       </div>
+
       <!-- Small Navbar -->
       <div class="nav_small">
-        
+        <div class="hide-mobile-menu toggle" onclick="hamburger()"></div>
         <!-- Nav links -->
         <div class="fix">
-          <nav class="nav_links mobile-nav-toggle flex">
+          <nav class="nav-links-small mobile-nav-toggle flex">
             <ul class="flex flex-col">
-              <li><a href="index.html">Home</a></li>
+              <li><a class="home flex" href="index.html">Home</a></li>
               <!-- Service -->
               <li>
-                <div
-                  class="has-sub-menu flex justify-between"
-                  onclick="submenu(this)"
-                >
-                  Services
-                  <div class="menu-arrow">
+                <div class="link flex">
+                  <a href="https://serinty.net/services/" class="flex">
+                    Services
+                  </a>
+                  <div class="menu-arrow" onclick="submenu(this)">
                     <svg
                       class="arrow-svg"
                       stroke="currentColor"
@@ -264,12 +340,11 @@
               </li>
               <!-- Consulting -->
               <li>
-                <div
-                  class="has-sub-menu flex justify-between"
-                  onclick="submenu(this)"
-                >
-                  Consulting
-                  <div class="menu-arrow">
+                <div class="link flex">
+                  <a href="https://serinty.net/services/" class="flex">
+                    Consulting
+                  </a>
+                  <div class="menu-arrow" onclick="submenu(this)">
                     <svg
                       class="arrow-svg"
                       stroke="currentColor"
@@ -313,12 +388,11 @@
               </li>
               <!-- Philosophy -->
               <li>
-                <div
-                  class="has-sub-menu flex justify-between"
-                  onclick="submenu(this)"
-                >
-                  Philosophy
-                  <div class="menu-arrow">
+                <div class="link flex">
+                  <a href="https://serinty.net/services/" class="flex">
+                    Philosophy
+                  </a>
+                  <div class="menu-arrow" onclick="submenu(this)">
                     <svg
                       class="arrow-svg"
                       stroke="currentColor"
@@ -367,12 +441,11 @@
               </li>
               <!-- Company -->
               <li>
-                <div
-                  class="has-sub-menu flex justify-between"
-                  onclick="submenu(this)"
-                >
-                  Company
-                  <div class="menu-arrow">
+                <div class="link flex">
+                  <a href="https://serinty.net/services/" class="flex">
+                    Company
+                  </a>
+                  <div class="menu-arrow" onclick="submenu(this)">
                     <svg
                       class="arrow-svg"
                       stroke="currentColor"
@@ -406,7 +479,9 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="https://serinty.net/contact/">Contact</a></li>
+              <li class="contact">
+                <a href="https://serinty.net/contact/">Contact</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -425,11 +500,259 @@
         </div>
       </div>
     </main>
+    <!-- Data Section -->
+    <section class="data">
+      <div class="container">
+        <div class="wrapper">
+          <div class="items grid">
+            <!-- Item -->
+            <div class="item grid">
+              <div class="texts grid">
+                <a
+                  href="https://serinty.net/consulting/datasafety/"
+                  class="title"
+                  >Data safety2</a
+                >
+                <span class="description"
+                  >We plan your data security and backup strategies</span
+                >
+              </div>
+              <!-- Recover Img -->
+              <div class="recovery-img">
+                <img src="./images/recover.svg" alt="recover" />
+              </div>
 
-    <!-- Welcome Seciont -->
+              <div class="texts enumeration grid">
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span> Backup local and in the cloud</span>
+                </div>
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>Recoverytest</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item grid">
+              <div class="texts grid">
+                <a
+                  href="https://serinty.net/consulting/datasafety/"
+                  class="title"
+                  >Data safety2</a
+                >
+                <span class="description"
+                  >We plan your data security and backup strategies</span
+                >
+              </div>
+              <!-- Recover Img -->
+              <div class="recovery-img">
+                <img src="./images/recover.svg" alt="recover" />
+              </div>
+
+              <div class="texts enumeration grid">
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span> Backup local and in the cloud</span>
+                </div>
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>Recoverytest</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item grid">
+              <div class="texts grid">
+                <a
+                  href="https://serinty.net/consulting/datasafety/"
+                  class="title"
+                  >Data safety2</a
+                >
+                <span class="description"
+                  >We plan your data security and backup strategies</span
+                >
+              </div>
+              <!-- Recover Img -->
+              <div class="recovery-img">
+                <img src="./images/recover.svg" alt="recover" />
+              </div>
+
+              <div class="texts enumeration grid">
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span> Backup local and in the cloud</span>
+                </div>
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>Recoverytest</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item grid">
+              <div class="texts grid">
+                <a
+                  href="https://serinty.net/consulting/datasafety/"
+                  class="title"
+                  >Data safety2</a
+                >
+                <span class="description"
+                  >We plan your data security and backup strategies</span
+                >
+              </div>
+              <!-- Recover Img -->
+              <div class="recovery-img">
+                <img src="./images/recover.svg" alt="recover" />
+              </div>
+
+              <div class="texts enumeration grid">
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span> Backup local and in the cloud</span>
+                </div>
+                <div class="text flex align-center">
+                  <div class="tick flex justify-center align-center">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>Recoverytest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Welcome Section -->
     <section class="welcome">
       <div class="container">
-        <h4>Wellcome to Serinity</h4>
+        <h4>Welcome to Serinity</h4>
         <div class="wrapper grid">
           <h3>Your Data - Your Money</h3>
           <!-- Paras -->
@@ -465,8 +788,163 @@
         </div>
       </div>
     </section>
+    <!-- Footer section -->
+    <footer>
+      <div class="container">
+        <div class="wrapper">
+          <!-- footer -->
+          <ul class="footer-links grid">
+            <li>
+              <div class="parent-link">Services</div>
+              <ul class="navigate-links grid">
+                <li>
+                  <a href="https://serinty.net/services/telephony/"
+                    >Telephony</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/services/project-planning/"
+                    >Project planning</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/services/server-maintenance/"
+                    >Server maintenance</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/services/employee-leasing/"
+                    >Employee leasing</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/services/music/">Music</a>
+                </li>
+                <li>
+                  <a href="https://serinty.net/services/network-and-internet/"
+                    >Network and Internet</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="parent-link">Consulting</div>
+              <ul class="navigate-links grid">
+                <li>
+                  <a href="https://serinty.net/consulting/enterprise-software/"
+                    >Enterprise Software</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/consulting/digitization/"
+                    >Digitization</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/consulting/save-it-cost/"
+                    >Safe IT costs</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/consulting/datasafety/"
+                    >Data safety2</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="parent-link">Philosophy</div>
+              <ul class="navigate-links grid">
+                <li>
+                  <a href="https://serinty.net/philosophy/distributed-systems/"
+                    >Distributed Systems</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/philosophy/open-source/"
+                    >Open source software</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/philosophy/transparency/"
+                    >Transparency</a
+                  >
+                </li>
+                <li>
+                  <a href="https://serinty.net/philosophy/self-responsible/"
+                    >self-responsible</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://serinty.net/philosophy/independence-for-your-company/"
+                    >Independence for your company</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="parent-link">Company</div>
+              <ul class="navigate-links grid">
+                <li>
+                  <a href="https://serinty.net/company/about/">About</a>
+                </li>
+                <li>
+                  <a href="https://serinty.net/company/team/">Team</a>
+                </li>
+                <li>
+                  <a href="https://serinty.net/company/partner/">Parter</a>
+                </li>
+                <li>
+                  <a href="https://serinty.net/company/imprint-and-privacy/"
+                    >Imprint and Privicy</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="parent-link">Contact</div>
+              <ul class="flex flex-col contact-links">
+                <li>
+                  <a href="tel:+255 5555555">Phone: +255 5555555</a>
+                </li>
+                <li>
+                  <a
+                    class="chat-whatsapp flex justify-center align-center"
+                    href="https://www.whatsapp.com/"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                      ></path>
+                    </svg>
 
+                    Chat on WhatsApp</a
+                  >
+                </li>
+                <li class="grid">
+                  <span>Follow us @</span>
+                  <div class="navigate-links grid">
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- Scripts -->
+    <script src="./js/db.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

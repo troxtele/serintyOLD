@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Origo Pro";
   src: url(./fonts/OrigoPro-Regular.woff) format("truetype");
+  letter-spacing: 2px;
 }
 
 *,
@@ -26,21 +27,6 @@
   --whatsapp-color: #25d366;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--submenu-bg);
-  border-radius: 2px;
-}
-
 body {
   margin: 0;
   line-height: inherit;
@@ -58,24 +44,9 @@ body {
     color: var(--text-color);
   }
 
-  .nav-large {
+  .nav_large {
     background-color: hsla(155, 70%, 5%, 0.9);
     border-bottom: 1px solid #14532d5d;
-    .logo-texts {
-      span:last-child {
-        color: #d6d3d1;
-      }
-    }
-  }
-
-  .data {
-    .items {
-      .item {
-        .title {
-          color: #fbbf24;
-        }
-      }
-    }
   }
 }
 
@@ -111,9 +82,7 @@ img {
 main,
 section,
 footer {
-  position: relative;
   padding: 2.5rem 0;
-  z-index: 999;
 }
 .flex {
   display: flex;
@@ -173,33 +142,28 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999;
 }
 
-.nav-large {
-  background-color: rgba(255, 251, 235, 0.85);
+.nav_large {
+  background-color: rgba(255, 251, 235, 0.5);
   backdrop-filter: blur(64px);
-  transition: background 0.3s ease-in-out, padding 0.3s ease-in-out,
-    border 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
   gap: 2rem;
-  border-bottom: 1px solid hsla(144, 61%, 20%, 0.1);
 
   .logo {
-    gap: 0.5rem;
+    gap: 1rem;
     img {
-      width: 0.8rem;
+      width: 1.2rem;
     }
-  }
-  .logo-texts {
-    line-height: 12px;
 
-    span {
-      font-size: 0.9rem;
-    }
-    span:last-child {
-      transition: 0.3s ease-in-out;
-      font-size: 0.6rem;
-      color: var(--dark-green);
+    .logo-texts {
+      gap: 0.3rem;
+
+      span:last-child {
+        font-size: 0.8rem;
+        color: #d6d3d1;
+      }
     }
   }
 
@@ -272,15 +236,11 @@ header {
     background: rgba(2, 2, 2, 0.521);
     height: 100vh;
     width: 100vw;
-    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    visibility: visible;
-    z-index: -100;
-    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: block;
   }
   .hide-mobile-menu.toggle {
-    visibility: hidden;
-    z-index: -100;
-    opacity: 0;
+    display: none;
   }
 
   .logo img {
@@ -288,7 +248,6 @@ header {
   }
 
   .fix {
-    z-index: 999;
     position: absolute;
     top: 100%;
     width: 65vw;
@@ -325,7 +284,6 @@ header {
       overflow: hidden;
 
       li {
-        transition: 0.3s ease-in-out;
         padding: 0.5rem 0;
         border-bottom: 1px solid var(--list-bottom-border);
       }
@@ -423,57 +381,12 @@ main {
   }
   h1 {
     font-size: 1.5rem;
-    letter-spacing: -0.02em;
-    font-weight: bold;
+    letter-spacing: -0em;
+    font-weight: 600;
     text-align: center;
   }
   img {
     max-width: 20rem;
-  }
-}
-
-/*---------------------------------------------------- 
-Data Section
-----------------------------------------------------*/
-.data {
-  .items {
-    gap: 2rem;
-    .item {
-      gap: 2rem;
-      border: 4px solid var(--dark-green);
-      padding: 1rem;
-      border-radius: 5px;
-      img {
-        max-width: 15rem;
-      }
-
-      .title {
-        transition: 0.3s ease-in-out;
-        color: #4d7c0f;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-    }
-
-    .texts {
-      gap: 0.6rem;
-    }
-
-    .text {
-      gap: 1rem;
-    }
-
-    .tick {
-      width: 1.15rem;
-      height: 1.15rem;
-      border-radius: 100%;
-      background-color: var(--submenu-bg);
-      color: var(--dark-green);
-
-      svg {
-        font-size: 0.95rem;
-      }
-    }
   }
 }
 
@@ -502,88 +415,21 @@ Welcome Section
 /*---------------------------------------------------- 
 Footer Section
 ----------------------------------------------------*/
+
 footer {
+  .footer-links {
+    gap: 3rem;
+  }
   .parent-link {
     font-size: 1.6rem;
   }
 
-  .footer-links {
-    row-gap: 2rem;
-  }
-
-  .navigate-links {
-    margin-top: 0.8rem;
-    margin-left: 1rem;
-    gap: 0.5rem;
-    a {
-      font-size: 1.1rem;
-      position: relative;
-      transition: 0.3s ease-in-out;
-    }
-
-    a:hover {
-      opacity: 0.65;
-    }
-  }
-
-  .navigate-links {
-    a::before {
-      content: "-";
-      position: absolute;
-      top: 50%;
-      left: -1rem;
-      transform: translateY(-50%);
-    }
-  }
-
-  .contact-links {
-    margin-top: 0.8rem;
-    gap: 0.5rem;
-    .chat-whatsapp {
-      max-width: 10.9rem;
-      gap: 0.4rem;
-      color: var(--bg-color);
-      background-color: var(--whatsapp-color);
-      padding: 0.6rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-
-      svg {
-        font-size: 1.1rem;
-      }
-    }
+  .submenu a {
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 400px) {
-  .nav-large {
-    .logo {
-      gap: 0.7rem;
-
-      .logo-img-link {
-        font-size: 0;
-        line-height: 0;
-      }
-      img {
-        width: 1rem;
-        vertical-align: top;
-        font-size: 0;
-        line-height: 0;
-      }
-    }
-    .logo-texts {
-      line-height: 14px;
-      gap: 0.2rem;
-      span {
-        font-size: 1.1rem;
-      }
-      span:last-child {
-        transition: 0.3s ease-in-out;
-        font-size: 0.65rem;
-        color: var(--dark-green);
-      }
-    }
-  }
   .fix {
     width: 50vw;
   }
@@ -593,53 +439,14 @@ footer {
   }
 }
 @media (min-width: 640px) {
-  main {
-    h1 {
-      font-size: 3rem;
-    }
-  }
-  // Data
-  .data {
-    .items {
+      .items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 3rem;
     }
-  }
-  .footer-links {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem;
-  }
 }
 @media (min-width: 768px) {
-  .nav-large {
-    .logo {
-      gap: 1rem;
-
-      .logo-img-link {
-        font-size: 0;
-        line-height: 0;
-      }
-      img {
-        width: 1.2rem;
-        vertical-align: top;
-        font-size: 0;
-        line-height: 0;
-      }
-    }
-    .logo-texts {
-      line-height: 20px;
-      gap: 0.2rem;
-      span {
-        font-size: 1.3rem;
-      }
-      span:last-child {
-        transition: 0.3s ease-in-out;
-        font-size: 0.8rem;
-        color: var(--dark-green);
-      }
-    }
+  .nav_large {
+    padding: 1rem 0;
   }
   .nav-links-large {
     display: flex;
@@ -657,7 +464,7 @@ footer {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     h1 {
-      font-size: 3.2rem;
+      font-size: 4rem;
       text-align: start;
     }
     img {
@@ -669,21 +476,88 @@ footer {
   footer {
     .footer-links {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      row-gap: 3rem;
+    }
+    .parent-link {
+      font-size: 1.6rem;
+    }
+
+    .navigate-links {
+      margin-top: 0.8rem;
+      margin-left: 0.5rem;
+      gap: 0.5rem;
+      a {
+        font-size: 1.1rem;
+        position: relative;
+        transition: 0.3s ease-in-out;
+      }
+
+      a:hover {
+        opacity: 0.65;
+      }
+
+      .chat-whatsapp {
+        gap: 0.4rem;
+        color: var(--bg-color);
+        background-color: var(--whatsapp-color);
+        padding: 0.6rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+
+        svg {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .navigate-links {
+      a::before {
+        content: "-";
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        transform: translateY(-50%);
+      }
     }
   }
 }
 @media (min-width: 1024px) {
-  main {
-    h1 {
-      font-size: 4rem;
-    }
-  }
   // Data
   .data {
     .items {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 4rem;
+      .item {
+        gap: 2rem;
+        border: 4px solid var(--dark-green);
+        padding: 1rem;
+        border-radius: 5px;
+        img {
+          max-width: 15rem;
+        }
+
+        .title {
+          color: #0000ee;
+        }
+      }
+
+      .texts {
+        gap: 0.6rem;
+      }
+
+      .text {
+        gap: 1rem;
+      }
+
+      .tick {
+        width: 1.15rem;
+        height: 1.15rem;
+        border-radius: 100%;
+        background-color: var(--submenu-bg);
+
+        svg {
+          font-size: 0.95rem;
+        }
+      }
     }
   }
 
