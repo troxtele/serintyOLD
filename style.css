@@ -102,7 +102,7 @@ main,
 section,
 footer {
   position: relative;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   z-index: 999;
 }
 
@@ -202,7 +202,7 @@ header {
   gap: 1.5rem;
 }
 .nav-large nav > ul {
-  gap: 0.5rem;
+  gap: 0rem;
 }
 .nav-large nav > ul li {
   position: relative;
@@ -222,6 +222,7 @@ header {
   display: flex;
   padding: 1rem 0.5rem;
   transition: 0.3s ease-in-out;
+  font-size: 1.1rem;
 }
 .nav-large nav > ul a:hover {
   color: var(--dark-green);
@@ -245,6 +246,19 @@ header {
 }
 .nav-large nav .submenu.grid a:hover {
   opacity: 0.8;
+}
+.nav-large select {
+  color: var(--dark-green);
+  font-size: 1rem;
+  background-color: var(--submenu-bg);
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.nav-large select::focus {
+  background-color: yellow;
+}
+.nav-large option:hover {
+  background-color: red;
 }
 
 .nav_small {
@@ -457,19 +471,19 @@ Data Section
 Welcome Section
 ----------------------------------------------------*/
 .welcome .wrapper.grid {
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .welcome h4 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .welcome h3 {
   font-size: 2rem;
   font-weight: 600;
 }
 .welcome .paras.grid {
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 /*---------------------------------------------------- 
@@ -553,7 +567,7 @@ footer .contact-links .chat-whatsapp svg {
 }
 @media (min-width: 640px) {
   main h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .data .items {
     gap: 3rem;
@@ -592,26 +606,40 @@ footer .contact-links .chat-whatsapp svg {
     font-size: 0.8rem;
     color: var(--dark-green);
   }
-  .nav-links-large {
-    display: flex;
-  }
-  .hamburger {
-    display: none;
-  }
   main,
   section {
     padding: 4rem 0;
+  }
+  main,
+  section,
+  footer {
+    padding: 2rem 0;
   }
   main .wrapper {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   main h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     text-align: start;
   }
   main img {
     max-width: 25rem;
+  }
+  .welcome .wrapper.grid {
+    gap: 2rem;
+  }
+  .welcome h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .welcome h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  .welcome .paras.grid {
+    gap: 2rem;
   }
   footer .footer-links {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -619,12 +647,23 @@ footer .contact-links .chat-whatsapp svg {
   }
 }
 @media (min-width: 1024px) {
+  .nav-links-large {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
   main h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .data .items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 4rem;
+  }
+  main,
+  section,
+  footer {
+    padding: 2.5rem 0;
   }
   footer .footer-links {
     grid-template-columns: repeat(4, minmax(0, 1fr));

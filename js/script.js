@@ -34,6 +34,15 @@ const submenu = (ele) => {
   svg.classList.toggle("rotate-svg");
 };
 
+// Change language
+let width = document.body.clientWidth;
+if (width < 768) {
+  const options = [...document.querySelectorAll("option")];
+  const lang = ["sw", "de", "en"];
+  options.map((option, index) => {
+    option.innerText = lang[index];
+  });
+}
 // Toggle Hamburger
 const hamburger = () => {
   toggleMobileNav.classList.toggle("toggle-mobile-menu");
